@@ -71,16 +71,10 @@ for (let i = 0; i < cardsArray.length; i++) {
     front.classList.add('front');
     front.dataset.name = cardsArray[i].name;
 
-    // Create back of card
-    var back = document.createElement('div');
-    back.classList.add('back');
-    back.style.backgroundColor = 'black';
-    // back.dataset.name = cardsArray[i].name;
-    
     // Append card to grid
     grid.appendChild(card);
     card.appendChild(front);
-    card.appendChild(back);
+    
 
 };
 
@@ -122,6 +116,7 @@ grid.addEventListener('click', function (event) {
     // Do not allow the grid section itself to be selected;
     // only select divs inside the grid
    
+    console.log(clicked.nodeName);
     if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('match') || clicked.parentNode.classList.contains('selected')) {
         return;
     }

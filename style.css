@@ -36,13 +36,11 @@ body {
 
 
 .card,
-.back,
 .front {
   height: 150px;
   width: 150px;
 }
 
-.back,
 .front {
   position: absolute;
   backface-visibility: hidden;
@@ -53,11 +51,6 @@ body {
   background: #FAB942 ;
 }
 
-.back {
-  transform: rotateY(180deg);
-  background-color: #6589F9;
- 
-}
 
 .selected {
   transform: rotateY(180deg);
