@@ -15,7 +15,7 @@ body {
 }
 
 .grid {
-  max-width: 960px;
+  max-width: 90vw;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -28,22 +28,24 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 150px;
-  width: 150px;
+  height: 5vw
+  width: 5vw;
 }
 
-
-
+#points{
+  position:absolute;
+  top: 0;
+  font-size: xxx-large;
+  color: wheat;
+  border: solid;
+  padding: 10px;
+}
 
 .card,
 .front {
-  height: 150px;
-  width: 150px;
-}
-
-.front {
-  position: absolute;
-  backface-visibility: hidden;
+  height: 10vw;
+  width: 10vw;
+  cursor:pointer;
 }
 
 .front {
@@ -51,9 +53,8 @@ body {
   background: #FAB942 ;
 }
 
-
 .selected {
-  transform: rotateY(180deg);
+  transform: rotateY(90deg);
 }
 
 .match {

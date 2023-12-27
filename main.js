@@ -116,7 +116,7 @@ grid.addEventListener('click', function (event) {
     // Do not allow the grid section itself to be selected;
     // only select divs inside the grid
 
-    if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('match') || clicked.parentNode.classList.contains('selected')) {
+    if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.classList.contains('match') || clicked.classList.contains('card') || clicked.classList.contains('selected')) {
         return;
     }
     var delay = 1000;
@@ -141,6 +141,8 @@ grid.addEventListener('click', function (event) {
                 // Run the match function
                 setTimeout(match, delay);
                 setTimeout(resetGuesses, delay);
+                var points = Number(document.getElementById('points').innerHTML);
+                document.getElementById('points').innerHTML = points+1; 
             } else {
                 setTimeout(resetGuesses, delay);
             }
